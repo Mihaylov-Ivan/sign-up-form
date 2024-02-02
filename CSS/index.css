@@ -1,4 +1,148 @@
 :root{
     --btn_colour: #596D48;
-    -input_box_border_colour: #E5E7EB;
+    --input_box_border_colour: #E5E7EB;
+}
+
+@font-face {
+    font-family: 'Norse Bold';
+    src: url('../assets/fonts/norse_bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#wrapper{
+    display: grid;
+    grid-template-columns: max(350px) auto;
+    width: 100vw;
+    height: 100vw;
+    align-content: center;
+}
+
+#background{
+    position: relative;
+    width: 350px;
+}
+
+#bg_image{
+    max-width: 350px;
+    height: 100%;
+    grid-column: 1;
+    position: absolute;
+}
+
+#logo{
+    position: absolute;
+    top: 125px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+#logo img{
+    width: 55px;
+    height:fit-content;
+    align-self: center;
+}
+
+#logo p{
+    font-size: 45px;
+    font-family: 'Norse Bold';
+    color: white;
+    margin: 20px 0px;
+}
+
+#form{
+    display: grid;
+    background-color: rgb(241, 241, 241);
+    border: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8px;
+    grid-template-rows: 1.2fr 2fr 1fr;
+}
+
+#form_input_field .row{
+    display: grid;
+    width: 75%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 9px;
+}
+
+#form_input_field{
+    background-color: white;
+    padding: 10px 0px 18px 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 10px;
+    box-shadow: 0 4px 3px -2px rgb(169, 169, 169);
+}
+
+#form p:first-child{
+    font-family: 'Calibri';
+    font-weight: bold;
+    font-size: 16px;
+    width: 85%;
+    margin: 50px 0px 30px 30px;
+}
+
+#already_have{
+    font-family: 'Calibri';
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    padding-left: 30px;
+}
+
+#form p:last-child a{
+    color: #596D48;
+    text-decoration: none;
+    font-weight: bold;
+}
+#form legend{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    grid-column: span 2;
+}
+
+#reg_form form{
+    display: grid;
+    height: 100%;
+}
+
+#reg_form input[type=submit]{
+    align-self: center;
+    width: 120px;
+    height: 25px;
+    margin-left: 30px;
+    background-color: #596D48;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11.5px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 1px 3px rgb(0, 0, 0);
+    text-align: center;
+}
+
+#reg_form input[type=text], input[type=email], input[type=password], input[type=tel]{
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+}
+
+#password_valid_label{
+    padding-left: 0px;
+    font-size: 9px;
+    color: red;
+}
+
+input[type=password]:invalid {
+    border: 2px solid red;
+}
+
+.hide{
+    display: none;
 }

@@ -4,10 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/css_reset.css" />
+    <link rel="stylesheet" href="../CSS/index.css" />
 
     <title>Odin Sign-Up Form</title>
 </head>
 <body>
-    
+    <div id="wrapper">
+        <div id="background">
+            <img id="bg_image" src="../assets/images/background.jpg" alt="">
+            <div id="logo">
+                <img src="../assets/images/logo.png" alt="">
+                <p>ODIN</p>
+            </div>
+        </div>
+        <div id="form">
+            <p>This is not a real online service! You know you need something like this in your life to
+                help you realise your deepest dreams.<br>
+                Sign up <em>now</em> to get started.
+                <br> <br>
+                You <em>know</em> you want to.
+            </p>
+            <div id="reg_form">
+                <form id="form_id" action="#" method="post">
+                    <div id="form_input_field">
+                        <legend>Let's do this!</legend>
+                        <div class="row">
+                            <label for="first_name">* FIRST NAME</label>
+                            <input type="text" name="first_name" id="firstname" required data-error-message="First name is required">
+                        </div>
+                        <div class="row">
+                            <label for="Last_name">* LAST NAME</label>
+                            <input type="text" name="last_name" id="lastname" required data-error-message="Last name is required">
+                        </div>
+                        <div class="row">
+                            <label for="EMAIL">* EMAIL</label>
+                            <input type="email" name="EMAIL" id="email" required data-error-message="Email is required">
+                        </div>
+                        <div class="row">
+                            <label for="phone_number">PHONE NUMBER</label>
+                            <input type="tel" name="phone_number" id="phonenumber">
+                        </div>
+                        <div class="row">
+                            <label for="password">* PASSWORD</label>
+                            <input type="password" name="password" id="password" required data-error-message="Password is required">
+                        </div>
+                        <div class="row">
+                            <label for="password_confirmation">* CONFIRM PASSWORD</label>
+                            <input type="password" name="password_confirmation" id="passwordconfirmation" required data-error-message="COnfirmation password is required">
+                        </div>
+                        <p class="hide" id="password_valid_label">* Passwords do not match!</p>
+                    </div>
+                    <input id="submit_btn" type="submit" value="Create Account">
+                </form>
+            </div>
+            <p id="already_have">Already have an account? <a href="#">Log in</a></p>
+        </div>
+    </div>
 </body>
+
+<script src="../JS/index.js"></script>
 </html>
